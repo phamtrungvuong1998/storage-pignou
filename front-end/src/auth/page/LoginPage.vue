@@ -7,7 +7,7 @@
                         <HeaderComp></HeaderComp>
                         <div class="card fat">
                             <div class="card-body">
-                                <h4 class="card-title">Login</h4>
+                                <CardTitle :name="`Login`"></CardTitle>
                                 <form method="POST">
 
                                     <div class="form-group">
@@ -19,22 +19,14 @@
 
                                     <div class="form-group">
                                         <label for="password">Password
-                                            <a href="forgot.html" class="float-right">
-                                                Forgot Password?
-                                            </a>
+                                            <router-link to="/forgot-password" class="float-right">Forgot Password?</router-link>
                                         </label>
                                         <input id="password" type="password" class="form-control" name="password"
                                                required data-eye>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>
-                                            <input type="checkbox" name="remember"> Remember Me
-                                        </label>
-                                    </div>
-
                                     <BaseButton :nameBtn="nameBtn"></BaseButton>
-                                    <UrlComp :textQuestion="`Don't have an account?`" :textConfirm="`Create One`" :urlRedirect="`/register`"></UrlComp>
+                                    <UrlComp :textQuestion="`Don't have an account?`" :textConfirm="`Sign up`" :urlRedirect="`/register`"></UrlComp>
                                 </form>
                             </div>
                         </div>
@@ -51,6 +43,7 @@ import HeaderComp from "@/auth/components/HeaderComp.vue";
 import FooterComp from "@/auth/components/FooterComp.vue";
 import BaseButton from "@/auth/components/BaseButton.vue";
 import UrlComp from "@/auth/components/UrlComp.vue";
+import CardTitle from "@/auth/components/CardTitle.vue";
 
 export default {
     name: "LoginPage",
@@ -59,6 +52,7 @@ export default {
         FooterComp,
         BaseButton,
         UrlComp,
+        CardTitle,
     },
     data() {
         return {

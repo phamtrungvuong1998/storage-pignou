@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div class="brand">
-        <img src="img/logo.jpg">
+        <img src="img/logo.png">
     </div>
 </template>
 
